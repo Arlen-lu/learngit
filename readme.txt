@@ -75,3 +75,13 @@ git remote -v 查看抓取和推送的origin的地址，如果没有推送权限，就看不到push的地址
 
 如果git pull提示no tracking information，则说明本地分支和远程分支的链接关系没有创建，用命令git branch --set-upstream-to <branch-name> origin/<branch-name>。
 >>>>>>> dev
+
+git tag v1.0 在当前分支添加新标签
+git tag 查看所有标签
+git tag -d v1.0删除标签
+git push origin v1.0推送标签到远程库
+git push origin --tags  推送所有标签到远程库
+git push origin :refs/tags/v1.0删除远程的标签
+git show v1.0 查看标签的具体信息
+git tag v1.1  commit_id 针对此次的commit添加tag
+git tag -a v1.2 -m "version 1.2 released" commit_id添加带有说明的标签，-a指定标签名，-m指定说明文字
