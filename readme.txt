@@ -47,8 +47,31 @@ git merge  --no-ff -m “explanation”  dev
 git branch -d dev 删除dev分支
 git branch -D dev 强行删除dev分支
 git log --graph   可查看分支合并图
+<<<<<<< HEAD
+=======
+git log --graph --pretty=oneline --abbrev-commit   查看分支合并图
+>>>>>>> dev
 branch test1 and test2
 git stash 将当前工作现场“储藏起来”，后续恢复再继续，一般用在临时新建分支去解bug
 git stash list 查看储存的工作现场
 git stash pop = git stash apply + git stash drop 恢复并删除stash
+<<<<<<< HEAD
 git stash apply stash@{0} 选择指定的stash恢复
+=======
+git stash apply stash@{0} 选择指定的stash恢复
+
+git remote 查看远程库
+git remote -v 查看抓取和推送的origin的地址，如果没有推送权限，就看不到push的地址
+
+多人协作的工作模式通常是这样：
+
+    1.首先，可以试图用git push origin <branch-name>推送自己的修改；
+
+    2.如果推送失败，则因为远程分支比你的本地更新，需要先用git pull试图合并；
+
+    3.如果合并有冲突，则解决冲突，并在本地提交；
+
+    4.没有冲突或者解决掉冲突后，再用git push origin <branch-name>推送就能成功！
+
+如果git pull提示no tracking information，则说明本地分支和远程分支的链接关系没有创建，用命令git branch --set-upstream-to <branch-name> origin/<branch-name>。
+>>>>>>> dev
