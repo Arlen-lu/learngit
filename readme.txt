@@ -8,7 +8,7 @@ git add filename  提交新增/修改的文件到暂存区
 git commit -m "explanation about what you add"  将刚添加/修改的文件从暂存区提交到分支库，并且清空暂存区
 git status   查看仓库当前状态，如文件被修改等
 git diff  显示文件修改的具体内容
-add log  查看修改记录
+git log  查看修改记录
 cat filename  查看文件内容
 git reflog 查看每次执行的命令
 git checkout -- filename    让文件回到最近一次git commit或git add时的状态。
@@ -31,10 +31,16 @@ git clone git@github.com:username/projectname克隆远程库到本地库中
 ls 查看当前路径下的文件夹
 
 
+
+新建分支，并切换到分支
+将工作区修改的内容更新到分支中区，此时master分支内容保持不变
+在dev库更新完成，并确认无误后，切换到master分支，并合并dev分支，此时两者库会变成同步的状态
 分支管理
 git checkout -b dev    创建名为dev的分支(-b表示创建并切换)
-= git branch dev  +  git checkout dev 
+= git branch dev  +  git checkout dev   创建分支dev + 切换分支
 
 git branch 查看当前分支
-git checkout master  切换为master分支
+git checkout master  切换为master分支，切换分支前确保已将工作区内容更新到git库中去
 git log 显示 End时，输入CTRL+C or “：q”
+git merge dev  将指定的dev分支合并到当前分支(即master分支)中去，内容完成同步
+git branch -d dev 删除dev分支
