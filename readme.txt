@@ -45,6 +45,7 @@ git log 显示 End时，输入CTRL+C or “：q”
 git merge  --no-ff -m “explanation”  dev  
 将指定的dev分支合并到当前分支(即master分支)中去，内容完成同步
 git branch -d dev 删除dev分支
+git branch -D dev 强行删除dev分支
 git log --graph   可查看分支合并图
 branch test1 and test2
 git stash 将当前工作现场“储藏起来”，后续恢复再继续，一般用在临时新建分支去解bug
