@@ -1,0 +1,1 @@
+1.cd D:/MyGit   定位到git库地址
