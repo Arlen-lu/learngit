@@ -36,3 +36,5 @@ git checkout -b dev    创建名为dev的分支(-b表示创建并切换)
 = git branch dev  +  git checkout dev 
 
 git branch 查看当前分支
+git checkout master  切换为master分支
+git log 显示 End时，输入CTRL+C or “：q”
