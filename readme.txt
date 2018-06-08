@@ -44,3 +44,5 @@ git checkout master  切换为master分支，切换分支前确保已将工作区内容更新到git库中
 git log 显示 End时，输入CTRL+C or “：q”
 git merge dev  将指定的dev分支合并到当前分支(即master分支)中去，内容完成同步
 git branch -d dev 删除dev分支
+
+branch test1
