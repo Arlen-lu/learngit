@@ -42,6 +42,12 @@ git checkout -b dev    创建名为dev的分支(-b表示创建并切换)
 git branch 查看当前分支
 git checkout master  切换为master分支，切换分支前确保已将工作区内容更新到git库中去
 git log 显示 End时，输入CTRL+C or “：q”
-git merge dev  将指定的dev分支合并到当前分支(即master分支)中去，内容完成同步
+git merge  --no-ff -m “explanation”  dev  
+将指定的dev分支合并到当前分支(即master分支)中去，内容完成同步
 git branch -d dev 删除dev分支
+git log --graph   可查看分支合并图
 branch test1 and test2
+git stash 将当前工作现场“储藏起来”，后续恢复再继续，一般用在临时新建分支去解bug
+git stash list 查看储存的工作现场
+git stash pop = git stash apply + git stash drop 恢复并删除stash
+git stash apply stash@{0} 选择指定的stash恢复
